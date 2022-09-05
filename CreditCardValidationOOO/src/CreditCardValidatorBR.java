@@ -1,7 +1,7 @@
 //Braeden Rizzuto
 //CreditCard Validator
 //Series of methods called from main class
-public class CreditCardValidator {
+public class CreditCardValidatorBR {
 	static final int SIZE = 16;
 
 //method is the hub for the calling of other methods	

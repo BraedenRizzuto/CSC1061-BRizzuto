@@ -3,7 +3,7 @@
 //Project calls a method from another class and prints the result.
 import java.util.Scanner;
 
-public class UserInterface 
+public class UserInterfaceBR 
 {
 	static Scanner input;
 
