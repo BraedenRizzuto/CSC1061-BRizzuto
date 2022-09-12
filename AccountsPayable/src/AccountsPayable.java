@@ -53,7 +53,7 @@ public class AccountsPayable
 		 basePay=input.nextDouble();
 		 
 		 BasePlusCommissionEmployee myEmployee4= new BasePlusCommissionEmployee(firstName,lastName,ssn,grossSal, comRate,
-					 basePay) 
+					 basePay) ;
 		 
 		
 		System.out.println("what type of employee are you?");
