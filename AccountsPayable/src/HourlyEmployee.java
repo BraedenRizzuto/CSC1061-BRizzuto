@@ -1,24 +1,15 @@
 
 public class HourlyEmployee extends Employee
 {
-	private double hourWage;
-	private double hrs;
+	 double hourWage;
+	 double hrs;
 	
 	
 	public HourlyEmployee()
 	{
-		
+		double hourWage= 0.0;
+		double hrs=0.0;
 	}
-	
-
-
-@Override
-	public String toString() {
-		return "HourlyEmployee [hourWage=" + hourWage + ", hrs=" + hrs + ", firstName=" + firstName + ", lastName="
-				+ lastName + ", ssn=" + ssn + "]";
-	}
-
-
 
 public HourlyEmployee(String firstName, String lastName, String ssn, double hourWage, double hrs) {
 		super(firstName, lastName, ssn);
@@ -49,4 +40,11 @@ public double getPaymentAmount ()
 	return (hourWage * hrs);
 }
 	
+
+@Override
+public String toString() {
+	return "HourlyEmployee [hourWage=" + hourWage + ", hrs=" + hrs + ", firstName=" + firstName + ", lastName="
+			+ getLastName() + ", ssn=" + ssn + "]";
 }
+}
+

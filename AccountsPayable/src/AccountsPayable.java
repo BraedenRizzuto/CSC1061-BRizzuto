@@ -2,81 +2,79 @@
 
 import java.util.Scanner;
 
-public class AccountsPayable
-{
-	
+public class AccountsPayable {
+
 	static Scanner input;
 
-	public static void main(String[] args)
-	{
-		 
-		input = new Scanner ( System.in );
-		String employee;
-		Employee payableEmployees []= new Employee [6];
-		
-		
-		System.out.println("what is the employee first name?");
-		String firstName= input.nextLine();
-		
-		System.out.println(firstName);
-		
-		System.out.println("what is the employee last name? ");
-		String lastName= input.nextLine();
-		System.out.println(lastName);
-		
-		System.out.println("what is the employee ssn?");
-		String ssn= input.nextLine();
-		System.out.print(ssn);
-		
-		Employee myEmployee = new Employee ( firstName,lastName,ssn);
-		
-		System.out.println("enter employees weekley salary?");
-		double weekSal=input.nextDouble();
-		
-		 SalariedEmployee myEmployee1= new SalariedEmployee(firstName, lastName, ssn, weekSal);
-		 
-		 System.out.println("enter employees gross salary");
-		 double grossSal=input.nextDouble();
-		 System.out.println("enter employees commission rate");
-		 double comRate=input.nextDouble();
-		 
-		 CommissionEmployee myEmployee2= new CommissionEmployee( firstName, lastName,  ssn,  grossSal,  comRate);
-		
-		 System.out.println("enter employees hourly wage");
-		 double hourWage = input.nextDouble();
-		 System.out.println("enter employees number of hours");
-		 double hrs=input.nextDouble();
-		 
-		 HourlyEmployee myEmployee3= new HourlyEmployee( firstName, lastName, ssn, hourWage, hrs);
-		 
-		 System.out.println("enter employees base pay");
-		 basePay=input.nextDouble();
-		 
-		 BasePlusCommissionEmployee myEmployee4= new BasePlusCommissionEmployee(firstName,lastName,ssn,grossSal, comRate,
-					 basePay) ;
-		 
-		
-		System.out.println("what type of employee are you?");
-		employee = input.nextLine();
-		System.out.print(employee);
-		
-		if (employee.equals("commission"))
-		{
-			//System.out.println("what is your commission rate?");
-			//double commissionRate=input.nextDouble();
+	public static void main(String[] args) {
+
+		input = new Scanner(System.in);
+		String empType;
+		Employee payableEmployees[] = new Employee[6];
+		int i = 0;
+		while (i < 6) {
+			System.out.println("what is the employee first name?");
+			String firstName = input.nextLine();
+			System.out.println(firstName);
+
+			System.out.println("what is the employee last name? ");
+			String lastName = input.nextLine();
+			System.out.println(lastName);
+
+			System.out.println("what is the employee ssn?");
+			String ssn = input.nextLine();
+			System.out.println(ssn);
 			
-			//System.out.println("what is your gross salary?");
-			//double grossSalary=input.nextDouble();
-			//this()commissionEmployee(  );
-			System.out.println(myEmployee.toString());
+			System.out.println("enter employee type");
+			empType = input.nextLine();
+
+			if (empType.equals("salary")) {
+				System.out.println("enter employees weekley salary?");
+				double weekSal = input.nextDouble();
+				System.out.println(weekSal);
+				SalariedEmployee myEmployeeSalary = new SalariedEmployee(firstName, lastName, ssn, weekSal);
+				System.out.println(myEmployeeSalary.toString());
+				payableEmployees[i]= myEmployeeSalary;
+
+			} else if (empType.equals("hourly")) {
+				System.out.println("enter employees hourly wage");
+				double hourWage = input.nextDouble();
+				System.out.println(hourWage);
+
+				System.out.println("enter employees number of hours");
+				double hrs = input.nextDouble();
+				System.out.println(hrs);
+				HourlyEmployee myEmployeeHourly = new HourlyEmployee(firstName, lastName, ssn, hourWage, hrs);
+				System.out.println(myEmployeeHourly.toString());
+				payableEmployees[i]= myEmployeeHourly;
+			} else if ((empType.equals("commission"))) {
+				System.out.println("enter employees gross sales");
+				double grossSale = input.nextDouble();
+				System.out.println(grossSale);
+				System.out.println("enter employees commission rate");
+				double comRate = input.nextDouble();
+				System.out.println(comRate);
+				CommissionEmployee myEmployeeCommission = new CommissionEmployee(firstName, lastName, ssn, grossSale,
+						comRate);
+				System.out.println(myEmployeeCommission.toString());
+				payableEmployees[i]= myEmployeeCommission;
+			}
+			i++;
+			input.nextLine();
+		
 		}
-		//printDetails(myEmployee,employee);
-		
-		// TODO Auto-generated method stub
+		i=0;
+		while(i<6 )
+		{
+			System.out.println(payableEmployees[i].toString());
+			payableEmployees[i].getWeekSal();
+		}
+		// CommissionEmployee myCommissionEmployeeBasePlusCom = new
+		// CommissionEmployee(firstName, lastName, ssn, grossSale,
+		// comRate);
+		// CommissionEmployee myCommissionEmployeeBasePlusCom.findBasePay();
+		// System.out.println(myCommissionEmployeeBasePlusCom);
+
 	}
-		
-	
-		
-	
 
 }

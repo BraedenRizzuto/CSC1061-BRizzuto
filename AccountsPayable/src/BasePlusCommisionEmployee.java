@@ -1,37 +1,33 @@
 
-public class BasePlusCommisionEmployee extends CommissionEmployee
-{
+public class BasePlusCommisionEmployee extends CommissionEmployee {
 	double basePay;
-	
-public BasePlusCommisionEmployee(String firstName, String lastName, String ssn, double grossSal, double comRate,
-			double basePay) {
-		super(firstName, lastName, ssn, grossSal, comRate);
-		this.basePay = basePay;
+
+	public BasePlusCommisionEmployee() {
+		double basePay = 0.0;
 	}
 
-public double getBasePay() {
-		return basePay;
+	public BasePlusCommisionEmployee(String firstName, String lastName, String ssn, double grossSale, double comRate,
+			double basePay) {
+		super(firstName, lastName, ssn, grossSale, comRate);
+		this.basePay = basePay;
 	}
 
 	public void setBasePay(double basePay) {
 		this.basePay = basePay;
 	}
 
+	public double getBasePay() {
+		return basePay;
+	}
 
+	@Override
+	public String toString() {
+		return "BasePlusCommisionEmployee [basePay=" + basePay + ", grossSal=" + grossSale + ", comRate=" + comRate
+				+ ", firstName=" + firstName + ", lastName=" + lastName + ", ssn=" + ssn + "]";
+	}
 
-public BasePlusCommisionEmployee()
- {
-	 
- }
-
-@Override
-public String toString() {
-	return "BasePlusCommisionEmployee [basePay=" + basePay + ", grossSal=" + grossSal + ", comRate=" + comRate
-			+ ", firstName=" + firstName + ", lastName=" + lastName + ", ssn=" + ssn + "]";
-}
-@Override
-public double getPaymentAmount()
-{
-	return (basePay+comRate);
-}
+	@Override
+	public double getPaymentAmount() {
+		return (basePay + comRate);
+	}
 }

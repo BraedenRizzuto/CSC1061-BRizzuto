@@ -6,7 +6,9 @@ public class Employee extends AccountsPayable {
 	  String ssn;
 	
 	public Employee() {
-
+		String firstname = "oooo";
+		String lastName = "oooo";
+		String ssn= "0000000000";
 	}
 	
 	public Employee(String firstName, String lastName, String ssn) {

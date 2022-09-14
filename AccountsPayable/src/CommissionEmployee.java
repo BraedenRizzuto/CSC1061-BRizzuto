@@ -2,25 +2,37 @@
 public class CommissionEmployee extends Employee
 {
 	
-	public double grossSal;
-	public double comRate; 
+	 double grossSale;
+	 double comRate; 
+	 double basePay;
 	
 	public CommissionEmployee()
 	{
-	
+		double grossSale= 0.0;
+		double comRate=0.0;
+		
 	}
 	
-	public CommissionEmployee(String firstName, String lastName, String ssn, double grossSal, double comRate) {
+	public CommissionEmployee(String firstName, String lastName, String ssn, double grossSale, double comRate) {
 		super(firstName, lastName, ssn);
-		this.grossSal = grossSal;
+		this.grossSale = grossSale;
 		this.comRate = comRate;
+		
 	}
+	public double findBasePay()
+	{
+		System.out.println("enter employees base pay");
+		basePay=input.nextDouble();
+		System.out.println(basePay);
+		return basePay;
+	}
+	
 
 	public double getGrossSal() {
-		return grossSal;
+		return grossSale;
 	}
-	public void setGrossSal(double grossSal) {
-		this.grossSal = grossSal;
+	public void setGrossSal(double grossSale) {
+		this.grossSale = grossSale;
 	}
 	public double getComRate() {
 		return comRate;
@@ -31,12 +43,12 @@ public class CommissionEmployee extends Employee
 	@Override
 	public double getPaymentAmount()
 	{
-		return (grossSal * comRate);
+		return (grossSale * comRate);
 	}
 
 	@Override
 	public String toString() {
-		return "CommisionEmployee [grossSal=" + grossSal + ", comRate=" + comRate + ", firstName=" + firstName
+		return "CommisionEmployee [grossSal=" + grossSale + ", comRate=" + comRate + ", firstName=" + firstName
 				+ ", lastName=" + lastName + ", ssn=" + ssn + "]";
 	}
 	
