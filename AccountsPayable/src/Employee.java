@@ -1,24 +1,22 @@
 
 public class Employee extends AccountsPayable {
 
-	  String firstName;
-	  String lastName;
-	  String ssn;
-	
+	private String firstName;
+	private String lastName;
+	private String ssn;
+
 	public Employee() {
 		String firstname = "oooo";
 		String lastName = "oooo";
-		String ssn= "0000000000";
+		String ssn = "0000000000";
 	}
-	
+
 	public Employee(String firstName, String lastName, String ssn) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.ssn = ssn;
 	}
-
-	
 
 	public String getFirstName() {
 		return firstName;
@@ -44,19 +42,14 @@ public class Employee extends AccountsPayable {
 		this.ssn = ssn;
 	}
 
-	
-	public double getPaymentAmount()
-	{
+	public double getPaymentAmount() {
 		return 0.0;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [firstName="+ firstName + '\n' + ", lastName=" + lastName + '\n' + ", ssn=" + ssn + "]";
+		return "Employee [firstName=" + getFirstName() + '\n' + ", lastName=" + getLastName() + '\n' + ", ssn="
+				+ getSsn() + "]";
 	}
 
-	
-	
 }
-
-	

@@ -1,6 +1,6 @@
 
 public class BasePlusCommisionEmployee extends CommissionEmployee {
-	double basePay;
+	private double basePay;
 
 	public BasePlusCommisionEmployee() {
 		double basePay = 0.0;
@@ -22,12 +22,13 @@ public class BasePlusCommisionEmployee extends CommissionEmployee {
 
 	@Override
 	public String toString() {
-		return "BasePlusCommisionEmployee [basePay=" + basePay + ", grossSal=" + grossSale + ", comRate=" + comRate
-				+ ", firstName=" + firstName + ", lastName=" + lastName + ", ssn=" + ssn + "]";
+		return "BasePlusCommisionEmployee [basePay=" + getBasePay() + ", grossSal=" + getGrossSale() + ", comRate="
+				+ getComRate() + ", firstName=" + getFirstName() + ", LastName=" + getLastName() + ", ssn=" + getSsn()
+				+ "]";
 	}
 
 	@Override
 	public double getPaymentAmount() {
-		return (basePay + comRate);
+		return (basePay + getComRate());
 	}
 }
