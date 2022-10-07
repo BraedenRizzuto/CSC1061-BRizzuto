@@ -1,1 +1,2 @@
 Person [name=ooooo, adress=ooooo, phoneNumber=00000000, emailAdress=ooooooo]
+Staff [name=ooooo, adress=ooooo, phoneNumber=00000000, emailAdress=ooooooo]office=oooooo, salary=0.0, date hired=0/0/0title=oooo

@@ -39,7 +39,7 @@ public class Employee extends Person
 
 	@Override
 	public String toString() {
-		return super.toString()+ "office = "+ office + "salary= "+ salary +" date hired = "+ dateHired;
+		return super.toString()+ "office="+ office + ", salary="+ salary +", date hired="+ dateHired;
 	}
 	
 

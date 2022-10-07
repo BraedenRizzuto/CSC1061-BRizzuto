@@ -5,12 +5,13 @@ public class Faculty extends Employee
 	private String rank;
 	
 	
-	public Faculty(String officeHrs, String rank) {
-		super();
-		this.officeHrs = officeHrs;
-		this.rank = rank;
+	public Faculty(String name, String adress, String phoneNumber, String emailAdress, String office, double salary,
+			String dateHired, String officeHrs, String rank) {
+		super(name, adress, phoneNumber, emailAdress, office, salary, dateHired);
+		this.officeHrs=officeHrs;
+		this.rank=rank;
 	}
-	
+
 	public Faculty( )
 	{
 		officeHrs= "0000000";
@@ -35,7 +36,7 @@ public class Faculty extends Employee
 
 	@Override
 	public String toString() {
-		return super.toString()+ "office hours= "+ officeHrs + "rank= "+ rank;
+		return super.toString()+ ", office hours="+ officeHrs + ", rank="+ rank;
 	}
 
 	

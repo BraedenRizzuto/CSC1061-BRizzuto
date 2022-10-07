@@ -2,11 +2,15 @@
 public class Student extends Person{
 	private String status;
 
-	public Student(String status) {
-		super();
-		this.status = status;
-	}
 	
+	
+	public Student(String name, String adress, String phoneNumber, String emailAdress, String status) {
+		super(name, adress, phoneNumber, emailAdress);
+		this.status=status;
+	}
+
+
+
 	public Student ( )
 	{
 		status = "ooo";

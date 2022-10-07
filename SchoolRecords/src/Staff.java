@@ -3,15 +3,29 @@ public class Staff extends Employee
 {
 	private String title;
 
-	public Staff(String title) {
-		super();
-		this.title = title;
+	
+	
+	public Staff(String name, String adress, String phoneNumber, String emailAdress, String office, double salary,
+			String dateHired, String title) {
+		super(name, adress, phoneNumber, emailAdress, office, salary, dateHired);
+		this.title= title;
 	}
-	
-	
+
+
+
+
 	public Staff()
 	{
 		title="oooo";
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 
@@ -22,14 +36,5 @@ public class Staff extends Employee
 		return super.toString()+ "title="+ title;
 	}
 
-
-	public String getTitle() {
-		return title;
-	}
-
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
 }
 
